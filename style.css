@@ -1,0 +1,136 @@
+/*
+ * __        __          _                  ____  _         _       
+ * \ \      / /_ _ _   _| |__   __ _ _ __  / ___|| |_ _   _| | ___  
+ *  \ \ /\ / / _` | | | | '_ \ / _` | '__| \___ \| __| | | | |/ _ \ 
+ *   \ V  V / (_| | |_| | |_) | (_| | |     ___) | |_| |_| | |  __/ 
+ *    \_/\_/ \__,_|\__, |_.__/ \__,_|_|    |____/ \__|\__, |_|\___| 
+ *                 |___/                              |___/         
+ *  
+ * Door Jaap Vink (2024) 
+ * ----------------------------------------------------- 
+*/
+
+/* Gruvbox */
+@define-color bg #282828;
+@define-color red #cc241d;
+@define-color green #98971a;
+@define-color yellow #d79921;
+@define-color blue #458588;
+@define-color purple #b16286;
+@define-color aqua #689d6a;
+@define-color gray #a89984;
+@define-color gray2 #928374;
+@define-color red2 #fb4934;
+@define-color green2 #b8bb26;
+@define-color yellow2 #fabd2f;
+@define-color blue2 #83a598;
+@define-color purple2 #d3869b;
+@define-color aqua2 #8ec07c;
+@define-color fg #ebdbb2;
+@define-color bg0_h #1d2021;
+@define-color bg1 #3c3836;
+@define-color bg2 #504945;
+@define-color bg3 #665c54;
+@define-color bg4 #7c6f64;
+@define-color bg0_s #32302f;
+@define-color fg0 #fbf1c7;
+@define-color fg2 #d5c4a1;
+@define-color fg3 #bdae93;
+@define-color fg4 #a89984;
+@define-color orange #d65d0e;
+@define-color orange2 #fe8019;
+
+* {
+    border: none;
+    border-radius: 0px;
+    font-family: "JetBrains Mono Nerd Font";
+    font-weight: 700;
+    font-size: 14px;
+    min-height: 10px;
+    margin: 0px;
+    padding: 0px;
+}
+
+#waybar {
+    background: transparent;
+}
+.modules-left, .modules-right {
+    background: @bg;
+    border-radius: 10px;
+    margin: 5px 5px 0px 5px;   
+}
+
+.modules-center {
+    border-radius: 10px;
+    margin: 5px 5px 0px 5px;
+}
+
+#workspaces, #window, #battery, #clock, tooltip {
+    background: @bg;
+    color: @fg;
+    border-radius: 10px;
+    margin: 0px;
+    padding: 5px 10px;
+}
+
+#workspaces button {
+    color: @fg;
+    margin: 0px 5px 0px 5px;    
+}
+
+#workspaces button:hover {
+    background: transparent;
+    color: @yellow;
+}
+
+#workspaces button.active {
+    color: @yellow;
+}
+
+#workspaces button.empty {
+}
+
+#workspaces button.persistent {
+}
+
+#workspaces button.special {
+}
+
+#workspaces button.visible {
+}
+
+#workspaces button.urgent {
+    color: @red;
+}
+
+#window {
+    background: @yellow;
+    color: @bg;
+    font-weight: 900;   
+    padding: 5px 15px; 
+}
+
+window#waybar.empty #window {
+    background-color: transparent;
+}
+
+#battery {
+}
+
+#battery.warning {
+    color: @yellow;
+}
+
+#battery.critical {
+    color: @red;
+}
+
+#clock {
+    background: @bg;
+    font-weight: 900;
+    padding: 0px 0px 0px 0px;
+}
+
+tooltip label {
+  color: @fg;
+}

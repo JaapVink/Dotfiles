@@ -1,0 +1,61 @@
+//
+// __        __          _                         
+// \ \      / /_ _ _   _| |__   __ _ _ __    
+//  \ \ /\ / / _` | | | | '_ \ / _` | '__|  
+//   \ V  V / (_| | |_| | |_) | (_| | |     
+//    \_/\_/ \__,_|\__, |_.__/ \__,_|_|     
+//                 |___/                                       
+//  
+// Door Jaap Vink (2024) 
+// ----------------------------------------------------- 
+//
+
+{
+    "layer": "top",
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["hyprland/window"],
+    "modules-right": ["battery", "clock"],
+    
+    "hyprland/window": {
+        "max-length": 80,
+	"tooltip": false
+    },
+  
+    "hyprland/workspaces" : {
+        "on-click": "activate",
+        "active-only": false,
+        "all-outputs": true,
+        "format": "{icon}",
+        "format-icons": {
+			"urgent": " ",
+			"active": " ",
+			"default": " "
+    			}
+    },
+
+    "battery": {
+        "bat": "BAT0",
+        "interval": 60,
+  	"states": {
+  	    "warning": 40,
+  	    "critical": 20,
+  	},
+        "format": "{icon} {capacity}%",
+        "format-time": "{H}h{M}m",
+        "format-icons": [" ", " ", " ", " ", " "],
+        "format-full": "{icon} full",
+        "format-charging": " ",
+        "format-critical": " ",
+        "tooltip":true,
+        "tooltip-format": "Empty in {time}",
+        "tooltip-format-charging": "Fully charged in {time}",     
+    },
+    
+    "clock": {
+        "interval": 60,
+        "format": "{:%H:%M}",
+        "tooltip": true,
+	"tooltip-format": "{:%a %d %b}"
+    },
+}
+
